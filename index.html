@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Dobândă de Întârziere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="container">
+            <h1>Calculator Dobândă de Întârziere</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="calculator-section">
+
+
+                <h2>Calculează dobânda de întârziere</h2>
+
+        <form id="calculator-form">
+                    <div class="input-group">
+                        <label for="valuta">Valuta:</label>
+                        <select id="valuta" name="valuta">
+                            <option value="MDL">MDL</option>
+                            <option value="USD">USD</option>
+                            <option value="EURO">EURO</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="rata">Rata dobânzii:</label>
+                        <select id="rata" name="rata">
+                            <option value="0">0%</option>
+                            <option value="5">5%</option>
+                            <option value="9">9%</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="zile">Vacanța de plată:</label>
+                        <input type="number" id="zile" name="zile" placeholder="Introdu numărul de zile">
+                    </div>
+                    <div class="input-group">
+                        <label for="stari">Excluderea stărilor de urgență:</label>
+                        <input type="checkbox" id="stari" name="stari"> <span>Exclude</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="data">Data calcul dobanda:</label>
+                        <input type="date" id="data" name="data" value="<?php echo date('Y-m-d'); ?>" readonly>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="input-section">
+                <h2>Introdu datele pentru calcul</h2>
+                <div class="input-group">
+                    <label for="data_scadenta">Data scadentă:</label>
+                    <input type="date" id="data_scadenta" name="data_scadenta">
+                </div>
+                <div class="input-group">
+                    <label for="suma_scadenta">Suma:</label>
+                    <input type="number" id="suma_scadenta" name="suma_scadenta" placeholder="Introdu suma">
+                    <button type="button" id="btn_adauga_scadenta">Adaugă Suma</button>
+                </div>
+                <div class="input-group">
+                    <label for="data_achitare">Data achitării:</label>
+                    <input type="date" id="data_achitare" name="data_achitare">
+                </div>
+                <div class="input-group">
+                    <label for="suma_achitata">Suma:</label>
+                    <input type="number" id="suma_achitata" name="suma_achitata" placeholder="Introdu suma">
+                    <button type="button" id="btn_adauga_achitare">Adaugă Suma</button>
+                </div>
+            </div>
+            <div class="table-section">
+                <h2>Rezultate</h2>
+                <table id="rezultate_table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Suma scadentă</th>
+                            <th>Suma achitată</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aici vor fi afișate datele -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td id="total_scadente">0.00</td>
+                            <td id="total_achitate">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <button type="submit">Calculează</button>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Calculator Dobândă de Întârziere</p>
+        </div>
+    </footer>
+</body>
+</html>
