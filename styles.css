@@ -44,10 +44,6 @@ main {
     float: left;
 }
 
-.input-section p {
-    margin-top: 20px;
-}
-
 .table-section {
     background-color: #fff;
     border-radius: 5px;
@@ -99,12 +95,49 @@ button:hover {
     background-color: #555;
 }
 
-footer {
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    text-align: center;
+#rezultate_table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-footer p {
-    margin: 0;
+#rezultate_table th, #rezultate_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
+
+#rezultate_table th {
+    background-color: #f2f2f2;
+}
+
+#rezultate_table tfoot td {
+    font-weight: bold;
+}
+.input-section {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+.input-section {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+
+.table-section {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    float: left;
+}
+
